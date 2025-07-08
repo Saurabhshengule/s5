@@ -29,3 +29,8 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'warfile'
     publishLocation: 'Container'
+
+- script: |
+    echo "Artifact Staging Directory is: $(Build.ArtifactStagingDirectory)"
+    ls -la $(Build.ArtifactStagingDirectory)
+  displayName: 'Show contents of artifact folder'
